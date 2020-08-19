@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <h1 class="text-center">All information about the Events!</h1>
+  <div class="card mt-3 detail">
+ 			<img class="img-fluid" src="../img/{{event.img}}" alt="img">
+  			<div class="card-body">
+  				<p class="h1">{{event.name}}</p>  			
+  				<p class="mt-3"><span class="font-weight-bold">Date:</span> 
+              <br>
+              {{event.date|date("F jS Y")}}
+          </p>
+  				<p><span class="font-weight-bold">from:</span> 
+              <br> 
+              {{event.time|date("H:i")}} 
+          </p>
+  				<p><span class="font-weight-bold">About::</span> 
+              <br>
+              {{event.description}}
+          </p>
+  				<p><span class="font-weight-bold">Capacity:</span> 
+              <br>
+              {{event.capacity}}
+          </p>
+  				<p><span class="font-weight-bold">Email:</span> 
+              <br>
+            {{event.email}}
+          </p>
+  				<p><span class="font-weight-bold">Phone:</span> 
+              <br>
+              {{event.phone}}
+          </p>
+  				<p><span class="font-weight-bold">Address:</span> 
+              <br>
+            {{event.address}}
+          </p>
+  				<p><span class="font-weight-bold">Homepage:</span> 
+              <br>
+              <a href="{{event.url}}">{{event.url}}</a>
+          </p>
+  				<p><span class="font-weight-bold">Sort:</span> 
+              <br>
+              {{event.type}}
+          </p>
+  			</div>
+  			<div class="d-flex justify-content-around">  				
+				<p><a href="/update/{{event.id}}" class="btn btn-warning">Update</a></p>
+				<p><a href="/delete/{{event.id}}" class="btn btn-danger">Delete</a></p>
+  			</div>  			
+		</div>
+
+  <!-- <p>{{event.address}}</p> -->
+
+  <p><a class="btn btn-info" href="/">Back to Events</a></p>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create{% endblock %}	
+
+{% block body %}	
+ 	<h1 class="text-center">Vienna Events!</h1>
+	<div class="row justify-content-around">
+	{% for event in events %}
+		
+ 		<div class="card mt-3">
+ 			<img class="img-fluid" src="../img/{{event.img}}" alt="img">
+  			<div class="card-body">
+  			<p class="h2 text-danger">{{event.name}}</p>
+  			<p class="h6"><span class="font-weight-bold">Preview:</span> 
+              				<br>
+  							{{event.date|date("F jS Y")}}
+  			</p>
+  			<p class="h6"><span class="font-weight-bold">from</span> 
+              				<br>
+  							{{event.time|date("H:i")}}
+  			</p>  			
+  			</div>
+  			<div class="d-flex justify-content-around">
+  				<p><a href="/details/{{event.id}}" class="btn btn-info">View</a></p>
+				<p><a href="/update/{{event.id}}" class="btn btn-warning">Update</a></p>
+				<p><a href="/delete/{{event.id}}" class="btn btn-danger">Delete</a></p>
+  			</div>
+		</div>
+	
+	{% endfor %}
+	</div>  
+	
+{% endblock %}

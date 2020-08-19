@@ -1,0 +1,50 @@
+body {
+	background-image: url('https://images.pexels.com/photos/3731014/pexels-photo-3731014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+	background-size: cover;
+}
+
+.card {
+	width: 20em;
+}
+
+.create {
+	max-width: 50em;
+	margin: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+.jumbotron {
+	height: 30em;
+	background-image: url('../img/3.jpg');
+
+}
+
+li {
+	padding: 1em;
+	font-size: 20px;
+
+}
+
+/* .self {
+	max-width: 20em;
+} */
+
+.detail {
+	width: 30em;
+	margin: auto;
+}
+footer{
+	text-align: center;
+}
+h1{
+	text-align: center;
+	color: white;
+	background-color: black;
+	background-size:cover;
+}
+mySlides{
+	background-size: cover;
+}
